@@ -18,6 +18,11 @@ export default {
 			  ,
 			backgroundImage: {
 				'hero-image':"url('/hero-image.jpg')"
+			},
+			colors: {
+				'primary':'#2986FE',
+				'gray-bg':'#f9f9fb',
+				'gray-text':'#6E6D7A'
 			}
 		},
 	},

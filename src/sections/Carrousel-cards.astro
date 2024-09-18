@@ -1,0 +1,91 @@
+---
+import Card from '../components/Card.astro'
+
+interface Card {
+    title: string;
+    body: string;
+    rate: number;
+    image: string;
+}
+
+const infoCards: Card[] = [
+    {
+        title: "Forest Wild Life",
+        body: "Next Galapagos",
+        rate: 9.0,
+        image: "/hero-image.jpg",
+    },
+    {
+        title: "Forest Wild Life",
+        body: "Next Galapagos",
+        rate: 7.6,
+        image: "/hero-image.jpg",
+    },
+    {
+        title: "Forest Wild Life",
+        body: "Next Galapagos",
+        rate: 3.4,
+        image: "/hero-image.jpg",
+    },
+    {
+        title: "Forest Wild Life",
+        body: "Next Galapagos",
+        rate: 3.4,
+        image: "/hero-image.jpg",
+    },
+    {
+        title: "Forest Wild Life",
+        body: "Next Galapagos",
+        rate: 3.4,
+        image: "/hero-image.jpg",
+    },
+];
+
+---
+
+<section class="w-9/12 m-auto">
+    <div class="flex justify-between align-middle">
+        <div class="">
+            <h2 class="text-4xl font-semibold mb-5">Popular Destination</h2>
+            <p class="text-sm text-gray-400">
+                Unfreash your Wonderlist With SkyWings
+            </p>
+        </div>
+        <div id="arrowBtns" class="flex flex-row items-center gap-3">
+            <div id="left" class="rounded-full bg-gray-50 p-2 hover:bg-black hover:text-white cursor-pointer">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-5"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.75 19.5 8.25 12l7.5-7.5"></path>
+                </svg>
+            </div>
+            <div id="right" class="rounded-full bg-gray-50 p-2 hover:bg-black hover:text-white cursor-pointer">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-5"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div id="carousel" class="grid overflow-hidden grid-flow-col md:auto-cols-[calc((100%/3))] sm:auto-cols-[calc((100%/2))]">
+        {infoCards.map((card:Card) => <Card title={card.title} body={card.body} rate={card.rate} image={card.image} /> )}
+    </div>
+    
+</section>

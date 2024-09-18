@@ -1,0 +1,24 @@
+---
+import Logo from "../components/Logo.astro"
+
+const items = ["Menu", "Tour", "Package", "Contact"];
+---
+
+<nav class="text-black uppercase w-10/12 h-16 text-sm m-auto">
+    <div class="flex flex-row justify-between h-full items-center">
+        <div id="logo" class="flex h-full w-28 items-center justify-center">
+            <Logo class="size-5" />
+        </div>
+
+        <div class="w-96 flex justify-center" id="items">
+            <ul class="flex flex-row justify-between w-full">
+                {items.map((item) => <li>{item}</li>)}
+            </ul>
+        </div>
+        <div id="button" class="min-w-32 flex justify-center">
+            <button class="bg-black text-white px-6 py-2 rounded-full">Book Trip </button>
+        </div>
+    </div>
+</nav>
+
+

@@ -1,0 +1,30 @@
+---
+interface Service {
+    icon: string;
+    title: string;
+    body: string;
+}
+
+interface Props {
+    service: Service;
+}
+
+const { service } = Astro.props;
+---
+
+<div
+    class="flex flex-col gap-8 justify-center text-center items-center"
+>
+    <div class="size-14 rounded-full bg-gray-bg flex justify-center items-center text-primary" set:html={service.icon} />
+    {/* Inserta el SVG aquí */}
+    <p
+        class="text-black font-medium text-lg "
+    >
+        {service.title}
+    </p>
+    <p
+        class="text-gray-text"
+    >
+        {service.body}
+    </p>
+</div>

@@ -1,0 +1,67 @@
+---
+import RateItem from "../components/Rate-item.astro";
+
+interface RateInterface {
+    rate: number;
+    body: string;
+    user: string;
+    role: string;
+    avatar: string;
+}
+
+const rates: RateInterface[] = [
+    {
+        rate: 4,
+        body: `•I Just Returned From The Most
+Amazing Trip TO Europe. All Thanks TO
+This Travel Agency! From The Moment I
+Contacted Them, They Were Incredibly
+Helpful And Made Sure To Create An
+Itinerary That Suited My Interests And
+Budget. I Can't Wait To Book My Next
+Adventure With Them!`,
+        user: "Arefin Shuvo",
+        role: "Product Designer",
+        avatar: "/hero-image.jpg",
+    },
+    {
+        rate: 5,
+        body: `•I Just Returned From The Most
+Amazing Trip TO Europe. All Thanks TO
+This Travel Agency! From The Moment I
+Contacted Them, They Were Incredibly
+Helpful And Made Sure To Create An
+Itinerary That Suited My Interests And
+Budget. I Can't Wait To Book My Next
+Adventure With Them!`,
+        user: "Arefin Shuvo",
+        role: "Product Designer",
+        avatar: "/hero-image.jpg",
+    },
+    {
+        rate: 2,
+        body: `•I Just Returned From The Most
+Amazing Trip TO Europe. All Thanks TO
+This Travel Agency! From The Moment I
+Contacted Them, They Were Incredibly
+Helpful And Made Sure To Create An
+Itinerary That Suited My Interests And
+Budget. I Can't Wait To Book My Next
+Adventure With Them!`,
+        user: "Arefin Shuvo",
+        role: "Product Designer",
+        avatar: "/hero-image.jpg",
+    },
+];
+---
+
+<section class="mt-12">
+    <h1 class="text-center font-semibold text-3xl my-14">Loved By Other Thousand Travelers</h1>
+    <div class="flex flex-row gap-7">
+        {
+            rates.map((rate => 
+                <RateItem rate={rate} />
+            ))
+        }
+    </div>
+</section>

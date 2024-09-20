@@ -10,10 +10,12 @@ import AboutUs from "../sections/About-us.astro";
 import Metrics from "../sections/Metrics.astro"
 import Services from "../sections/Services.astro";
 import Rates from "../sections/Rates.astro";
+import PreFooter from "../sections/Pre-footer.astro";
+import Footer from "../sections/Footer.astro";
 ---
 
 <Layout title="KWASKU">
-    <main class="w-7/12 m-auto">
+    <main class="md:w-7/12 sm:w-11/12 m-auto">
         <Nav />
         <HeroSection />
         <Sponsors />
@@ -24,6 +26,8 @@ import Rates from "../sections/Rates.astro";
         <Metrics />
         <Services />
         <Rates />
+        <PreFooter />
+        <Footer />
         <br><br><br><br><br><br><br><br>
 
 	</main>

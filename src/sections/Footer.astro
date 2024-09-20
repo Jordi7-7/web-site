@@ -1,0 +1,50 @@
+---
+import Logo from "../components/Logo.astro"
+import Redes from "../components/Redes.astro"
+
+const info = 
+[
+    {
+        title:"Company",
+        items:["About Us","Tour Guide", "Packages", "Contact"]
+    },
+    {
+        title:"Resources",
+        items:["Free eBooks","Development Tutorial", "How to - Blog", "Youtube Playlist"]
+    },
+    {
+        title:"Extra Links",
+        items:["Customer Support","Terms & Conditions", "Privacy Policy"]
+    },
+]
+
+---
+<footer class="bg-gray-bg py-14 absolute left-0 right-0">
+    <div class="grid grid-cols-4 md:w-7/12 sm:w-11/12 m-auto">
+        <div class="flex flex-col gap-5">
+            <div class="flex items-center justify-center">
+                <Logo class="size-5" />
+            </div>
+            <p class="text-base text-gray-text font-medium">Discover the world one
+            adventure at a time
+            Life is short, book the trip.</p>
+            <div>
+                <Redes />
+            </div>
+        </div>
+        {info.map((item) => (
+            <div class="flex flex-col  items-center gap-8">
+              <!-- Title -->
+              <p class="font-semibold text-lg text-center">{item.title}</p>
+              <!-- List of items -->
+              <ul class="flex flex-col justify-center gap-3">
+                {item.items.map((i) => (
+                  <li class="text-base">{i}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
+    </div>
+
+</footer>
